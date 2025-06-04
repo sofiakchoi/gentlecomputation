@@ -11,7 +11,7 @@ p {
 }
 
 #zoom-container {
-    height: 150vh;
+    height: 100vh;
 }
 
 #zoom-text {
@@ -21,4 +21,18 @@ p {
     transform: opacity(0) scale(1) translate(-50%, -50%);
     transition: font-size 0.25s ease-out;
     overflow: hidden;
+}
+
+.textcolumns {
+    column-count: 2;
+    column-gap: 1em;
+}
+
+#popup01 {
+    border: 2px solid #E72629;
+    width: 33%;
+    height: 30rem;
+    overflow: scroll;
+    border-radius: 1rem;
+    padding: 1rem;
 }
