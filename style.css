@@ -1,5 +1,5 @@
 body {
-    background-image: url('background.png');
+    background-image: url('images/background-min.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -7,6 +7,8 @@ body {
     height: 100vh;
     margin: 15em;
 }
+
+
 
 h1 {
     font-family: plantin-condensed, sans-serif;
@@ -41,7 +43,7 @@ p {
 .textcolumns {
     column-count: 2;
     column-gap: 2em;
-    margin-top: 3em;
+    margin-top: 5em;
 }
 
 /* popups */
@@ -93,14 +95,104 @@ p {
     padding: 0;
 }
 
+#popup04 {
+    margin-top: 7em;
+    border: 2px solid #0036ff;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 10px 5px 5px #0036ff;
+}
+
+#popup04:hover {
+    #popupcontent04 img{
+        display: none;
+    }
+
+    #hovercontent02 {
+        display: block;
+    }
+}
+
+#hovercontent02 img{
+    width: 100%;
+}
+
+#hovercontent02 {
+    display: none;
+}
+
+#popup04 hr {
+    border: 1px solid #0036ff;
+    padding: 0;
+}
+
+#popupcontent04 img{
+    width: 100%;
+}
+
+#popup05 {
+    margin-top: 27em;
+    border: 2px solid #0036ff;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 10px 5px 5px #0036ff;
+}
+
+#popup05:hover {
+
+    #popupcontent05 img{
+        display: none;
+    }
+
+    #hovercontent {
+        display: block;
+    }
+}
+
+#hovercontent img{
+    width: 100%;
+}
+
+#hovercontent {
+    display: none;
+}
+
+#popup05 hr {
+    border: 1px solid #0036ff;
+    padding: 0;
+}
+
+#popupcontent05 img{
+    width: 100%;
+}
+
 .popupheadline {
     font-family: ibm-plex-mono, sans-serif;
     padding: 5px 10px 0px 10px;
     color: #0036ff;
 }
 
+#popups550 {
+    margin-bottom: 10em;
+    display: none;
+}
+
 .popupcontent {
     padding: 5px 10px 3px 10px;
+}
+
+.popupscolumn {
+    margin-top: 3em;
+    border: 2px solid #0036ff;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 10px 5px 5px #0036ff;
+    margin-bottom: 3em;
+}
+
+.popupscolumn hr {
+    border: 1px solid #0036ff;
+    padding: 0;
 }
 
 /* tabs */
@@ -188,65 +280,44 @@ p {
     color: #ffffff;
 }
 
-/* buttons */
-#button {
-    display: flex;
-    white-space: nowrap;
-    width: 6em;
-    text-align: center;
-    line-height: 120%;
-    font-family: ibm-plex-mono, sans-serif;
-    font-size: 1.25em;
-    font-style: normal;
-    font-weight: 200;
+/* dropdowns */
+
+.description {
+    display: none;
+}
+
+.collapsible {
+    background-color: transparent;
     color: #0036ff;
-    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
     border: 2px solid #0036ff;
-    overflow: hidden;
-    border-radius: 100px;
-}
-
-#click {
-    animation-name: click;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    padding: 5px 15px 5px 15px;
-    text-decoration: none;
-}
-
-#button #click {
-    display: inline-block;
-}
-
-@keyframes click {
-    from {
-        transform: translateX(0%);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-#button:hover {
-    display: flex;
-    white-space: nowrap;
-    width: 6em;
-    text-align: center;
-    line-height: 120%;
+    text-align: left;
+    outline: none;
     font-family: ibm-plex-mono, sans-serif;
-    font-size: 1.25em;
-    font-style: normal;
     font-weight: 200;
-    color: #ffffff;
-    background-color: #0036ff;
-    text-decoration: none;
-    border: 2px solid #0036ff;
-    overflow: hidden;
-    border-radius: 100px;
+    font-size: 1.5rem;
+    line-height: 20px;
+    border-radius: 0;
 }
 
+.active, .collapsible:hover {
+    background-color: #0036ff;
+    color: #ffffff;
+}
+
+.mediacontent {
+    padding: 1em;
+    display: none;
+    overflow: hidden;
+    color: #0036ff;
+    background-color: #ffffff;
+    border: 2px solid #0036ff;
+    text-align: left;
+    border-radius: 0;
+    margin-top: -1em;
+    margin-bottom: 2em;
+}
 
 
 .end {
@@ -269,7 +340,7 @@ p {
 }
 
 #finalmessage {
-    margin-top: 2em;
+    margin-top: 4em;
     margin-bottom: 2em;
 }
 
@@ -280,15 +351,69 @@ p {
 #hover01:hover {
     text-decoration: underline;
     color: #0036ff;
+    cursor: pointer;
 }
+
+/* buttons */
 
 .buttonrow {
-    margin-top: 5em;
+    margin-top: 3em;
+    justify-content: center;
 }
 
-.buttonrow #button {
+.buttonrow .click {
     display: inline-block;
     justify-content: center;
+}
+
+.click {
+    display: inline-block;
+    position: relative;
+    font-family: ibm-plex-mono, sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #0036ff;
+    background-color: transparent;
+    text-decoration: none;
+    border: 2px solid #0036ff;
+    border-radius: 2em;
+    transition: all 0.2s ease-out;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.click:hover {
+    color: #ffffff;
+    background-color: #0036ff;
+}
+
+.click span::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 150%;
+    width: 100%;
+    text-align: center;
+}
+
+.click:hover .clickcontent {
+    animation: clickAnim 1.75s linear infinite;
+    animation-play-state: running;
+}
+
+/* Let's create animation */
+@keyframes clickAnim {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-150%);
+    }
 }
 
 .center {
@@ -302,6 +427,17 @@ p {
     margin-top: 10em;
 }
 
+#explore {
+    color: #0036ff;
+    font-family: ibm-plex-mono, sans-serif;
+    font-size: 1.25em;
+    font-style: italic;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 10em;
+    margin-bottom: 0em;
+}
+
 #ack {
     color: #0036ff;
     font-family: ibm-plex-mono, sans-serif;
@@ -309,11 +445,75 @@ p {
     font-style: italic;
     font-weight: 200;
     text-align: center;
-    margin-top: -5.25em;
+    margin-top: 5.25em;
     margin-bottom: 5em;
 }
 
-#ack a{
+#ack a {
     color: #0036ff;
     font-family: ibm-plex-mono, sans-serif;
 }
+
+@media (max-width: 900px) {
+
+    .textcolumns {
+        column-count: 1;
+        column-gap: 2em;
+        margin-top: 5em;
+    }
+
+    .description {
+        display: block;
+        margin-top: 3em;
+    }
+
+    .centerresources {
+        display: none;
+    }
+
+  }
+
+  @media (max-width: 750px) {
+
+    .buttonrow .click {
+        display: flex;
+        justify-content: center;
+    }
+
+    .click {
+        margin-top: 1em;
+    }
+
+    #popups550 {
+        margin-bottom: 10em;
+        display: block;
+        
+    }
+
+    #popup01 {
+        display: none;
+    }
+
+    #popup02 {
+        display: none;
+    }
+
+    #popup03 {
+        display: none;
+    }
+
+  }
+
+  @media (max-width: 550px) {
+
+    #popup05 {
+        margin-top: 3em;
+        border: 2px solid #0036ff;
+        width: 100%;
+        border-radius: 1rem;
+        box-shadow: 10px 5px 5px #0036ff;
+    }
+
+
+
+  }
