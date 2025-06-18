@@ -31,6 +31,8 @@ p {
 
 #zoom-container {
     height: 100vh;
+    text-align: center;
+    justify-content: center;
 }
 
 #zoom-text {
@@ -543,6 +545,33 @@ text-decoration: none;
         box-shadow: 10px 5px 5px #0036ff;
     }
 
+
+
+  }
+
+
+  @media (max-width: 450px) {
+
+    .collapsible {
+        background-color: transparent;
+        color: #0036ff;
+        cursor: pointer;
+        width: 100%;
+        border: 2px solid #0036ff;
+        text-align: left;
+        outline: none;
+        font-family: ibm-plex-mono, sans-serif;
+        font-weight: 200;
+        font-size: 1rem;
+        line-height: 20px;
+        border-radius: 0;
+    }
+
+    body {
+        background-image: none;
+        height: 100vh;
+        margin: 7em;
+    }
 
 
   }
